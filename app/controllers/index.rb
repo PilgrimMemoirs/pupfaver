@@ -14,10 +14,10 @@ end
 
   #LOGIN REQUEST
 post '/sessions' do
-
-  if @user = User.authenticate(@name, params[:password])
-    session[:user_id] = @user.id
-    redirect 'dogs/show'
+  user = User.authenticate(params[:user][:name], params[:user][:password])
+  if user
+    session[:user_id] = user.id
+    redirect '/dogs'
   else
     @error = "Invalid email or password"
     erb :'/sessions/new'
@@ -41,12 +41,8 @@ end
   #SIGNUP REQUEST
 post '/users' do
   @user = User.create(params[:user])
-  if @user.save
-    session[:user_id] = @user.id
-    redirect '/dogs'
-  else
-    erb :'/users/new'
-  end
+  session[:user_id] = @user.id
+  redirect '/dogs'
 end
 
 
@@ -67,8 +63,13 @@ end
 
   #CREATE NEW DOG PAGE
 get '/dogs/new' do
+  erb :'dogs/show'
 end
 
+post '/dogs' do
+  @dog = Dog.new(params[:dog])
+  erb :'dogs/show'
+end
 
   #EDIT DOG
 put '/dogs/:id/edit' do

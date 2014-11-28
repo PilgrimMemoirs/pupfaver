@@ -13,10 +13,11 @@
 
   <nav>
 
-    <div class="brand"><a href="/">Pups</a></div>
+    <div class="brand"><a href="/">Puppy Tinder</a></div>
 
     <ul>
       <% if current_user %>
+        <li><a href="/dogs/new">Add a Dog</a></li>
         <li><a id="sign-out" href="/sessions/<%= current_user.id %>">Sign Out</a></li>
       <% else %>
         <li><a href="/sessions/new">Sign In</a></li>

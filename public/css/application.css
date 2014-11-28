@@ -7,16 +7,8 @@
 
 .container h1 {
   font-size: 17pt;
-
 }
 
-.dog {
-  margin: 10px auto;
-  width: 50%;
-  padding: 10px;
-  border: 1px solid black;
-
-}
 
 nav {
   width: 100%;
@@ -81,3 +73,36 @@ form.quirks {
   margin-right: 20px;
   width: 200px;
 }
+
+
+
+.dog {
+  margin: 10px auto;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.dog h3 {
+  display: block;
+  width: 60%;
+  float: left;
+}
+
+.dog p, h4{
+  clear: both;
+}
+
+.dog ul {
+  list-style-type: none;
+}
+
+.dog li {
+  display: inline;
+  padding: 5 px;
+  width: 30%;
+  float: right;
+}
+
+
+

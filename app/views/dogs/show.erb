@@ -1,13 +1,25 @@
+
+
 <div class="dog">
 
       <% @dogs.each do |dog| %>
         <h3><%= dog.name %></h3>
         <ul>
-          <li><%= dog.age %></li>
-          <li><%= dog.breed %></li>
+          <li>Age: <%= dog.age %></li>
+          <li>Breed:<%= dog.breed %></li>
         </ul>
+        <h4> About </h4>
         <p><%= dog.description %></p>
 
+        <form action="/dogs/<%= dog.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+        </form>
+
+        <div class="brand">
+          <a href="/dogs/<%= dog.id %>/edit">Edit Dog</a>
+          <a href="/user/favorite"> Like </a>
+        </div>
     <%end%>
   </div>
 </body>
