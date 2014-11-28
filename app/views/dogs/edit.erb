@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h2> Edit'a'Pup </h2>
+
+  <form id="create pup" action="/dogs/<%= @dog.id %>" method="POST" >
+    <label class="label" for="name"> Name </label>
+    <input type="text" name="dog[name]" placeholder="Pup's name" value="<%= @dog.name %>">
+    <br>
+
+    <label class="label" for="age"> Age </label>
+    <input type="age" name="dog[age]" placeholder="Pup's Age" value="<%= @dog.age %>">
+    <br>
+
+    <label class="label" for="breed"> Age </label>
+    <input type="breed" name="dog[breed]" placeholder="Pup's Breed" value="<%= @dog.breed %>">
+    <br>
+
+    <label class="label" for="description"> Description </label>
+    <input type="description" name="dog[description]" placeholder="About the Pup" value="<%= @dog.description %>">
+
+    <div class="submit"><input type="submit" value="Submit Pup"></div>
+  </form>
+</div>
+
+</div>
