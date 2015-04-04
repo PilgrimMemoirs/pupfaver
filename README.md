@@ -1,4 +1,3 @@
-## Puppy Tinder
+## Puppy Cute or Not
 
-It's Legit
-
+Experimental Sinatra App while in Dev Bootcamp
