@@ -1,3 +1,3 @@
 ## Puppy Cute or Not
 
-Experimental Sinatra App while in Dev Bootcamp
+Very basic, experimental app while learing Sinatra and basic web app structure. 
